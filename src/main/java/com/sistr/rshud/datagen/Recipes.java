@@ -25,5 +25,14 @@ public class Recipes extends RecipeProvider {
                 .key('R', Tags.Items.DUSTS_REDSTONE)
                 .addCriterion("has_redstone", this.hasItem(Tags.Items.DUSTS_REDSTONE))
                 .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(Registration.MOD_WORKBENCH_ITEM.get())
+                .patternLine("ISI")
+                .patternLine("SRS")
+                .patternLine("ISI")
+                .key('S', net.minecraftforge.common.Tags.Items.STONE)
+                .key('R', Tags.Items.DUSTS_REDSTONE)
+                .key('I', Tags.Items.INGOTS)
+                .addCriterion("has_redstone", this.hasItem(Tags.Items.DUSTS_REDSTONE))
+                .build(consumer);
     }
 }
